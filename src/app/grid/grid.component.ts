@@ -14,35 +14,42 @@ export class GridComponent implements OnInit {
   grid = new Grid('new board', 'easy');
 
   makeMove() {
-    this.grid.moveNum++;
+    this.moveNum++;
   }
+  moveNum = 0;
 
   addRocks() {
     for (let i = 0; i < this.grid.board.length; i++) {
         for (let j = 0; j < this.grid.board[i].length; j++) {
           if (this.grid.board[i][j] !== null) {
-            console.log(this.grid.board);
             this.grid.board[i][j].coordX = i + 1;
             this.grid.board[i][j].coordY = j + 1;
           }
         }
     }
-    console.log(this.grid.board);
     return this.grid.board;
   }
 
-  validFirstMove(selectedRock) {
-    if (selectedRock.coordinates < 7 && this.grid.moveNum < 2) {
+  validMove(selectedRock) {
+    if (selectedRock === null) {
+      return;
+    } else if (selectedRock.coordY < 7 && this.grid.moveNum < 2 && selectedRock.clicked === false) {
       selectedRock.clicked = true;
-    } else {
-      selectedRock.clicked = false;
+      this.makeMove();
+    } else if (selectedRock.clicked === false) {
+      selectedRock.clicked = true;
+      this.makeMove();
     }
+    console.log(selectedRock);
+    console.log(this.moveNum);
   }
+
 
   validEndMove(selectedRock) {
     if (selectedRock.coordinates >= 18) {
     }
   }
+
 
   constructor() { }
 
