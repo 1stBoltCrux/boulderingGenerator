@@ -3,7 +3,6 @@ td {
   width: 50px;
   border: 1px solid black;
 }
-
 .hold-1 {
   background: url('./../../assets/hold-1.png');
   background-repeat: no-repeat;
@@ -28,4 +27,7 @@ td {
   background: url('./../../assets/hold-5.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+td:hover {
+  cursor: pointer;
 }
