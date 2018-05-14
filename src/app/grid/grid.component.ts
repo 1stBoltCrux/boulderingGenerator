@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Grid } from '../problem.model';
-
+import { Grid } from '../grid.model';
 import { Rock } from '../rock.model';
-
 import { ProblemService } from '../problem.service';
 
 
@@ -13,24 +11,24 @@ import { ProblemService } from '../problem.service';
   providers: [ProblemService]
 })
 export class GridComponent implements OnInit {
-  grid = new Grid;
+  grid = new Grid('new board', 'easy');
 
   makeMove() {
     this.grid.moveNum++;
-    console.log(this.grid.moveNum);
   }
 
   addRocks() {
     for (let i = 0; i < this.grid.board.length; i++) {
-      console.log(this.grid.board[i]);
         for (let j = 0; j < this.grid.board[i].length; j++) {
-          if (this.grid.board[i][j] === 'o') {
-            this.grid.board[i][j] = new Rock(i + 1, j + 1);
+          if (this.grid.board[i][j] !== null) {
+            console.log(this.grid.board);
+            this.grid.board[i][j].coordX = i + 1;
+            this.grid.board[i][j].coordY = j + 1;
           }
         }
     }
     console.log(this.grid.board);
-    this.grid.board;
+    return this.grid.board;
   }
 
   validFirstMove(selectedRock) {

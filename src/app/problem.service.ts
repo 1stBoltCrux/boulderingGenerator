@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Grid } from './problem.model';
+import { Grid } from './grid.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
