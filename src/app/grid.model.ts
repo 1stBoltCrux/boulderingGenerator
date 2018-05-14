@@ -3,7 +3,7 @@ import { Rock } from './rock.model';
 export class Grid {
 
  board = [
-   [new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0)],
+   [new Rock(0, 0, 'yellow'), new Rock(0, 0, 'darkblue'), new Rock(0, 0, 'white'), new Rock(0, 0, 'white'), new Rock(0, 0, 'darkblue'), new Rock(0, 0, 'yellow'), new Rock(0, 0, 'lightblue'), new Rock(0, 0, 'yellow'), new Rock(0, 0, ''), new Rock(0, 0), new Rock(0, 0)],
    [null, null, null, new Rock(0, 0), null, null, new Rock(0, 0), null, null, null, null],
    [new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0)],
    [new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), new Rock(0, 0), null, null],
