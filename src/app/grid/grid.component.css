@@ -3,3 +3,29 @@ td {
   width: 50px;
   border: 1px solid black;
 }
+
+.hold-1 {
+  background: url('./../../assets/hold-1.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.hold-2 {
+  background: url('./../../assets/hold-2.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.hold-3 {
+  background: url('./../../assets/hold-3.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.hold-4 {
+  background: url('./../../assets/hold-4.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.hold-5 {
+  background: url('./../../assets/hold-5.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
