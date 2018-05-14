@@ -7,12 +7,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ProblemListComponent } from './problem-list/problem-list.component';
+import { HelpComponent } from './help/help.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ProblemListComponent,
+    HelpComponent
 
   ],
   imports: [
