@@ -1,3 +1,8 @@
+.navbar button {
+  border: none;
+  position: relative;
+  right: 15px;
+}
 .navbar a {
   color: #FCB836;
 }
