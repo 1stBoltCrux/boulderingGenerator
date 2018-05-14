@@ -13,7 +13,7 @@ import { ProblemService } from '../problem.service';
   providers: [ProblemService]
 })
 export class GridComponent implements OnInit {
-  grid = new Grid;
+  grid = new Grid('new board', 'easy');
 
   makeMove() {
     this.grid.moveNum++;
@@ -22,15 +22,14 @@ export class GridComponent implements OnInit {
 
   addRocks() {
     for (let i = 0; i < this.grid.board.length; i++) {
-      console.log(this.grid.board[i]);
         for (let j = 0; j < this.grid.board[i].length; j++) {
-          if (this.grid.board[i][j] === 'o') {
-            this.grid.board[i][j] = new Rock(i + 1, j + 1);
+          if (typeof this.grid.board[i][j] === 'object') {
+            this.grid.board[i][j].coordX = i;
+            this.grid.board[i][j].coordY = j;
           }
         }
     }
     console.log(this.grid.board);
-    this.grid.board;
   }
 
   validFirstMove(selectedRock) {
