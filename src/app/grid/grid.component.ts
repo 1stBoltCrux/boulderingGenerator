@@ -20,12 +20,20 @@ export class GridComponent implements OnInit {
       if (typeof parseInt(row) === 'number') {
         for (let i = 0; i < this.grid[row].length; i++) {
           if (this.grid[row][i] === 'o') {
-            this.grid[row][i] = new Rock(row + ',' + i]);
+            this.grid[row][i] = new Rock(parseFloat(row + '.' + i));
           }
         }
       }
     }
     console.log(this.grid)
+  }
+
+  validFirstMove(selectedRock) {
+    if (selectedRock.coordinates < 7 && this.grid.moveNum < 2) {
+      selectedRock.clicked = true;
+    } else {
+      selectedRock.clicked = false;
+    }
   }
 
   constructor() { }
