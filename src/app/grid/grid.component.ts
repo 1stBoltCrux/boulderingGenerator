@@ -47,6 +47,7 @@ export class GridComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.addRocks();
   }
 
 }
