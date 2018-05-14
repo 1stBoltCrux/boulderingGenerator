@@ -5,7 +5,8 @@ import { ProblemService } from '../problem.service';
 @Component({
   selector: 'app-grid',
   templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.css']
+  styleUrls: ['./grid.component.css'],
+  providers: [ProblemService]
 })
 export class GridComponent implements OnInit {
   grid = new Grid;
