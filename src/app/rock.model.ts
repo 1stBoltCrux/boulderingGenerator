@@ -1,4 +1,4 @@
 export class Rock {
   clicked = false;
-  constructor(public coordinates: number) {}
+  constructor(public coordX: number, public coordY: number) {}
 }

@@ -17,20 +17,20 @@ export class GridComponent implements OnInit {
 
   makeMove() {
     this.grid.moveNum++;
-    console.log(this.grid.moveNum)
+    console.log(this.grid.moveNum);
   }
 
   addRocks() {
-    for (let row in this.grid) {
-      if (typeof parseInt(row) === 'number') {
-        for (let i = 0; i < this.grid[row].length; i++) {
-          if (this.grid[row][i] === 'o') {
-            this.grid[row][i] = new Rock(parseFloat(row + '.' + i));
+    for (let i = 0; i < this.grid.board.length; i++) {
+      console.log(this.grid.board[i]);
+        for (let j = 0; j < this.grid.board[i].length; j++) {
+          if (this.grid.board[i][j] === 'o') {
+            this.grid.board[i][j] = new Rock(i + 1, j + 1);
           }
         }
-      }
     }
-    console.log(this.grid)
+    console.log(this.grid.board);
+    this.grid.board;
   }
 
   validFirstMove(selectedRock) {
@@ -38,6 +38,11 @@ export class GridComponent implements OnInit {
       selectedRock.clicked = true;
     } else {
       selectedRock.clicked = false;
+    }
+  }
+
+  validEndMove(selectedRock) {
+    if (selectedRock.coordinates >= 18) {
     }
   }
 
