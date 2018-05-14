@@ -31,7 +31,7 @@ export class GridComponent implements OnInit {
   }
 
   validMove(selectedRock) {
-    if (selectedRock === null) {
+    if (selectedRock === null || this.moveNum === 14) {
       return;
     } else if (selectedRock.coordY < 7 && this.grid.moveNum < 2 && selectedRock.clicked === false) {
       selectedRock.clicked = true;
