@@ -10,9 +10,13 @@ import { masterFirebaseConfig } from './api-keys';
 
 
 import { AppComponent } from './app.component';
+
+import { GridComponent } from './grid/grid.component';
+
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProblemListComponent } from './problem-list/problem-list.component';
 import { HelpComponent } from './help/help.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,9 +28,13 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+
+    GridComponent
+
     WelcomeComponent,
     ProblemListComponent,
     HelpComponent
+
 
   ],
   imports: [
