@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Grid } from '../problem.model';
+
 import { Rock } from '../rock.model';
+
+import { ProblemService } from '../problem.service';
+
 
 @Component({
   selector: 'app-grid',
   templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.css']
+  styleUrls: ['./grid.component.css'],
+  providers: [ProblemService]
 })
 export class GridComponent implements OnInit {
   grid = new Grid;
