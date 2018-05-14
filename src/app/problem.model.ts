@@ -1,4 +1,6 @@
 export class Grid {
+  constructor(public name: string, public difficulty: string){}
+
  18 = ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'];
  17 = ['', '', '', 'o', '', '', 'o', '', '', '', ''];
  16 = ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'];
