@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Grid } from '../problem.model';
+import { ProblemService } from '../problem.service';
 
 @Component({
   selector: 'app-grid',
