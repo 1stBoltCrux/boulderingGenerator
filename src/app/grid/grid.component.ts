@@ -22,8 +22,8 @@ export class GridComponent implements OnInit {
     for (let i = 0; i < this.grid.board.length; i++) {
         for (let j = 0; j < this.grid.board[i].length; j++) {
           if (this.grid.board[i][j] !== null) {
-            this.grid.board[i][j].coordX = i + 1;
-            this.grid.board[i][j].coordY = j + 1;
+            this.grid.board[i][j].coordY = i + 1;
+            this.grid.board[i][j].coordX = j + 1;
           }
         }
     }
@@ -40,8 +40,8 @@ export class GridComponent implements OnInit {
       selectedRock.clicked = true;
       this.makeMove();
     }
-    console.log(selectedRock);
-    console.log(this.moveNum);
+    // console.log(selectedRock);
+    // console.log(this.moveNum);
   }
 
 
@@ -50,6 +50,19 @@ export class GridComponent implements OnInit {
     }
   }
 
+  highlight(rock) {
+    if (rock === null) {
+      console.log();
+    } else if (rock.clicked === true && rock.coordY > 12 && this.grid.clickedNum <=2 ) {
+       this.grid.clickedNum++;
+      console.log(this.grid.clickedNum);
+      return 'bg-success';
+    }  else if (rock.clicked === true && rock.coordY > 1) {
+      return 'bg-info';
+    } else if (rock.clicked === true && rock.coordY === 1){
+      return 'bg-danger';
+    }
+  }
 
   constructor() { }
 
