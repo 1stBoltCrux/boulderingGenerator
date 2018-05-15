@@ -1,0 +1,245 @@
+{
+  "grid": {
+    "name": "prototype",
+    "difficulty": "VB",
+    "moveNum": 0,
+    "board": [
+      [{
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "white"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "yellow"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "darkblue"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "white"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "white"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "yellow"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "white"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "yellow"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "white"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "lightblue"
+        }
+
+      },
+      {
+        "rock":
+        {
+          "coordX": 0,
+          "coordY": 0,
+          "color": "yellow"
+        }
+
+      }],
+      [
+        null,
+        null,
+        null,
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "white"
+          }
+
+        },
+        null,
+        null,
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "teal"
+          }
+
+        },
+        null,
+        null,
+        null,
+        null
+
+      ],
+      [
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "yellow"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "orange"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "orange"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "teal"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "darkblue"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "yellow"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "orange"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "yellow"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "white"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "darkblue"
+          }
+
+        },
+        {
+          "rock":
+          {
+            "coordX": 0,
+            "coordY": 0,
+            "color": "orange"
+          }
+
+        }
+      ]
+
+
+
+    ]
+
+
+
+  }
+}
