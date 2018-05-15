@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { GridComponent } from './grid/grid.component';
 import { ProblemListComponent } from './problem-list/problem-list.component';
 import { HelpComponent } from './help/help.component';
+import { GridDetailsComponent } from './grid-details/grid-details.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'help',
     component: HelpComponent
+  },
+  {
+    path: 'grids/:id',
+    component: GridDetailsComponent
   }
 ];
 
