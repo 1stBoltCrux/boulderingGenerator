@@ -6,6 +6,12 @@ td {
 th {
   color: #FCB836;
 }
+.rock-grid-container {
+  padding: 20px;
+  background: rgba(237,78,42, .4);
+  border-radius: 10px;
+  margin: 20px 0;
+}
 .hold-1 {
   background: url('./../../assets/hold-1.png');
   background-repeat: no-repeat;
