@@ -50,6 +50,22 @@ export class GridComponent implements OnInit {
     }
   }
 
+  setClass(item) {
+    if (item === null) {
+      console.log(item);
+    } else if (item.color === 'orange') {
+      return 'hold-1';
+    } else if (item.color === 'darkblue') {
+      return 'hold-2';
+    } else if (item.color === 'yellow') {
+      return 'hold-3';
+    } else if (item.color === 'teal') {
+      return 'hold-4';
+    } else if (item.color === 'white') {
+      return 'hold-5';
+    }
+  }
+
 
   constructor() { }
 
