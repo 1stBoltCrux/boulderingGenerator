@@ -10,9 +10,11 @@ export class ProblemService {
   constructor(private database: AngularFireDatabase) {
     this.grids = database.list('grids');
   }
-
   getGrids() {
     return this.grids;
+  }
+  submitUser(user) {
+    this.grids.push(user);
   }
 
   addGrid(newGrid) {

@@ -11,6 +11,7 @@ import { GridComponent } from './grid/grid.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProblemListComponent } from './problem-list/problem-list.component';
 import { HelpComponent } from './help/help.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 import { GridDetailsComponent } from './grid-details/grid-details.component';
 
 
@@ -24,12 +25,11 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-
     GridComponent,
-
     WelcomeComponent,
     ProblemListComponent,
     HelpComponent,
+    UserInfoComponent,
     GridDetailsComponent
 
   ],

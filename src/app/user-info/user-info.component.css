@@ -1,0 +1,20 @@
+.user-info-container {
+  width: 500px;
+}
+
+.user-info-container input,
+.user-info-container select,
+.user-info-container select option {
+  background-color: rgba(255,255,255,.4);
+  border: none;
+  color: white;
+}
+
+.user-info-container select:focus,
+.user-info-container option:focus {
+  border: none;
+}
+
+::placeholder {
+  color: white;
+}
