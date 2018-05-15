@@ -56,9 +56,9 @@ export class GridComponent implements OnInit {
       console.log();
     } else if (rock.clicked === true && rock.coordY > 14) {
       return 'bg-success';
-    }  else if (rock.clicked === true && rock.coordY > 1) {
+    } else if (rock.clicked === true && rock.coordY > 1) {
       return 'bg-info';
-    } else if (rock.clicked === true && rock.coordY === 1){
+    }  else if (rock.clicked === true && rock.coordY === 1) {
       return 'bg-danger';
     }
   }
