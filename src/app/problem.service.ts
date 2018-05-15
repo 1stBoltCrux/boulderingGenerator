@@ -9,6 +9,7 @@ export class ProblemService {
 
   constructor(private database: AngularFireDatabase) {
     this.grids = database.list('grids');
+    // console.log(this.grids);
   }
 
   getGrids() {

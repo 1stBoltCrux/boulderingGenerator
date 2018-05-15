@@ -1,6 +1,6 @@
 <h2>User Submitted Routes</h2>
 
-<div *ngFor="let grid of grids" class="card card-default">
+<div *ngFor="let grid of grids | async" class="card card-default">
   <div class="card-body">
     <h4 (click)="goToDetailPage(grid)">User: {{grid.name}} Difficulty: {{grid.difficulty}}</h4>
   </div>
