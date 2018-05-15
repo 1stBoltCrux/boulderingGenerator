@@ -14,7 +14,11 @@
       <th class="text-center">K</th>
     </thead>
     <tr *ngFor="let row of grid.board">
-      <td [class]="setClass(item)" (click)="validMove(item); highlight(item)" *ngFor="let item of row" class="board-item" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}"></td>
+      <td [class]="highlight(item)" (click)="validMove(item)" *ngFor="let item of row" class="board-item" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}">
+        <div [class]="setClass(item)">
+
+        </div>
+      </td>
     </tr>
   </table>
 </div>
