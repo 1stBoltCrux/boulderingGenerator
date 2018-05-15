@@ -3,6 +3,9 @@ td {
   width: 50px;
   border: 1px solid black;
 }
+th {
+  color: #FCB836;
+}
 .hold-1 {
   background: url('./../../assets/hold-1.png');
   background-repeat: no-repeat;
