@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Grid } from '../grid.model';
 import { Rock } from '../rock.model';
 import { ProblemService } from '../problem.service';
+import { UserGrid } from '../user.model';
 
 
 @Component({
@@ -11,8 +12,10 @@ import { ProblemService } from '../problem.service';
   providers: [ProblemService]
 })
 export class GridComponent implements OnInit {
-  constructor(private problemService: ProblemService) { }
-  grid = new Grid('new board', 'easy');
+
+  grid = new Grid();
+  newUser = new UserGrid('new user', 'easy');
+
 
   makeMove() {
     this.moveNum++;

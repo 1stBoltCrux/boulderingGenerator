@@ -21,9 +21,7 @@ export class Grid {
     [null, new Rock(0, 0, 'yellow'), null, new Rock(0, 0, 'orange'), null, null, null, null, null, null, null],
     [null, null, null, null, null, null, new Rock(0, 0, 'teal'), null, null, new Rock(0, 0, 'white'), null],
     [null, null, null, null, null, null, null, null, null, null, null]
-  ]
-
-  constructor(public name: string, public difficulty: string){}
+  ];
 
  moveNum = 0;
  clickedArr = [];
