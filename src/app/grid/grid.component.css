@@ -40,3 +40,8 @@ th {
 td:hover {
   cursor: pointer;
 }
+
+td div {
+  min-height: 100%;
+  min-width: 100%;
+}
