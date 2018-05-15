@@ -26,5 +26,5 @@ export class Grid {
   constructor(public name: string, public difficulty: string){}
 
  moveNum = 0;
- clickedNum=0;
+
 }
