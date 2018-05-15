@@ -13,14 +13,16 @@ import { UserGrid } from '../user.model';
 })
 export class GridComponent implements OnInit {
 
+  constructor(private problemService: ProblemService) {}
+
   grid = new Grid();
   newUser = new UserGrid('new user', 'easy');
 
+  moveNum = 0;
 
   makeMove() {
     this.moveNum++;
   }
-  moveNum = 0;
 
   addRocks() {
     for (let i = 0; i < this.grid.board.length; i++) {
@@ -54,21 +56,19 @@ export class GridComponent implements OnInit {
     console.log(this.moveNum);
   }
   clickedRocks() {
-    for(let i = 0; i < this.grid.board.length; i++) {
-      for(let j = 0; j < this.grid.board[i].length; j++) {
-        if(this.grid.board[i][j] !== null && this.grid.board[i][j].clicked) {
-          this.grid.clickedArr.push(this.grid.board[i][j]);
+    for (let i = 0; i < this.grid.board.length; i++) {
+      for (let j = 0; j < this.grid.board[i].length; j++) {
+        if (this.grid.board[i][j] !== null && this.grid.board[i][j].clicked) {
+          this.newUser.clickedArr.push(this.grid.board[i][j]);
         }
       }
     }
-    return this.grid.clickedArr;
+    return this.newUser.clickedArr;
   }
   submitRoute() {
     this.clickedRocks();
-    this.problemService.addGrid(this.grid);
+    this.problemService.addGrid(this.newUser);
   }
-
-
 
   validEndMove(selectedRock) {
     if (selectedRock.coordinates >= 18) {
