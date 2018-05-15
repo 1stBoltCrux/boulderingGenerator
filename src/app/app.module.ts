@@ -11,6 +11,7 @@ import { GridComponent } from './grid/grid.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProblemListComponent } from './problem-list/problem-list.component';
 import { HelpComponent } from './help/help.component';
+import { GridDetailsComponent } from './grid-details/grid-details.component';
 
 
 export const firebaseConfig = {
@@ -28,7 +29,8 @@ export const firebaseConfig = {
 
     WelcomeComponent,
     ProblemListComponent,
-    HelpComponent
+    HelpComponent,
+    GridDetailsComponent
 
   ],
   imports: [

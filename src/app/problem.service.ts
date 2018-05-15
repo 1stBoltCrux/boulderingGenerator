@@ -19,4 +19,7 @@ export class ProblemService {
     this.grids.push(newGrid);
   }
 
+  getGridById(gridId: string){
+    return this.database.object('grids/' + gridId);
+  }
 }
