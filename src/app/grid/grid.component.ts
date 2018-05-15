@@ -54,7 +54,7 @@ export class GridComponent implements OnInit {
   highlight(rock) {
     if (rock === null) {
       console.log();
-    } else if (rock.clicked === true && rock.coordY > 12 ) {
+    } else if (rock.clicked === true && rock.coordY > 14) {
       return 'bg-success';
     } else if (rock.clicked === true && rock.coordY > 1) {
       return 'bg-info';
@@ -65,7 +65,6 @@ export class GridComponent implements OnInit {
 
   setClass(item) {
     if (item === null) {
-      console.log(item);
     } else if (item.color === 'orange') {
       return 'hold-1';
     } else if (item.color === 'darkblue') {

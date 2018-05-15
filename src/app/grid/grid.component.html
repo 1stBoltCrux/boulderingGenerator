@@ -1,8 +1,26 @@
-<table >
-  <tr *ngFor="let row of grid.board">
-    <td [class]="highlight(item)" (click)="validMove(item)" *ngFor="let item of row" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}"><div class="setClass(item)"></div></td>
 
-  </tr>
-</table>
+<div class="rock-grid-container">
+  <table >
+    <thead>
+      <th class="text-center">A</th>
+      <th class="text-center">B</th>
+      <th class="text-center">C</th>
+      <th class="text-center">D</th>
+      <th class="text-center">E</th>
+      <th class="text-center">F</th>
+      <th class="text-center">G</th>
+      <th class="text-center">H</th>
+      <th class="text-center">I</th>
+      <th class="text-center">J</th>
+      <th class="text-center">K</th>
+    </thead>
+    <tr *ngFor="let row of grid.board">
+      <td [class]="highlight(item)" (click)="validMove(item)" *ngFor="let item of row" class="board-item" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}">
+        <div [class]="setClass(item)">
 
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
 <p>Move Number: {{grid.moveNum}}</p>
