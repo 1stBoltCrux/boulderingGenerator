@@ -25,9 +25,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-
     GridComponent,
-
     WelcomeComponent,
     ProblemListComponent,
     HelpComponent,
