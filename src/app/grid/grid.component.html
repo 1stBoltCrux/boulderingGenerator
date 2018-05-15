@@ -1,3 +1,4 @@
+
 <div class="rock-grid-container">
   <table >
     <thead>
@@ -14,7 +15,7 @@
       <th class="text-center">K</th>
     </thead>
     <tr *ngFor="let row of grid.board">
-      <td (click)="validMove(item)" *ngFor="let item of row" class="board-item" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}">{{item ? 'Rock' : ''}}</td>
+      <td [class]="setClass(item)" (click)="validMove(item)" *ngFor="let item of row" class="board-item" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}"></td>
     </tr>
   </table>
 </div>
