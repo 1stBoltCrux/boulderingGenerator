@@ -52,8 +52,7 @@ export class GridComponent implements OnInit {
       selectedRock.clicked = false;
       this.moveNum--;
     }
-    // console.log(selectedRock);
-    console.log(this.moveNum);
+
   }
   clickedRocks() {
     for (let i = 0; i < this.grid.board.length; i++) {
