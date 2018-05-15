@@ -12,8 +12,10 @@ import { UserGrid } from '../user.model';
   providers: [ProblemService]
 })
 export class GridComponent implements OnInit {
+
   grid = new Grid();
   newUser = new UserGrid('new user', 'easy');
+
 
   makeMove() {
     this.moveNum++;
@@ -51,6 +53,21 @@ export class GridComponent implements OnInit {
     // console.log(selectedRock);
     console.log(this.moveNum);
   }
+  clickedRocks() {
+    for(let i = 0; i < this.grid.board.length; i++) {
+      for(let j = 0; j < this.grid.board[i].length; j++) {
+        if(this.grid.board[i][j] !== null && this.grid.board[i][j].clicked) {
+          this.grid.clickedArr.push(this.grid.board[i][j]);
+        }
+      }
+    }
+    return this.grid.clickedArr;
+  }
+  submitRoute() {
+    this.clickedRocks();
+    this.problemService.addGrid(this.grid);
+  }
+
 
 
   validEndMove(selectedRock) {
@@ -87,8 +104,6 @@ export class GridComponent implements OnInit {
       return 'hold-5';
     }
   }
-
-  constructor() { }
 
   ngOnInit() {
     this.addRocks();

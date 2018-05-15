@@ -24,5 +24,6 @@ export class Grid {
   ];
 
  moveNum = 0;
+ clickedArr = [];
 
 }
