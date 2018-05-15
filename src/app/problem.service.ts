@@ -8,7 +8,7 @@ export class ProblemService {
   grids: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.grids = database.list('board');
+    this.grids = database.list('grids');
   }
 
   getGrids() {

@@ -62,9 +62,7 @@ export class GridComponent implements OnInit {
   }
   submitRoute() {
     this.clickedRocks();
-    for(let i = 0; i < this.grid.clickedArr.length; i ++) {
-      this.problemService.addGrid(this.grid.clickedArr[i]);
-    }
+    this.problemService.addGrid(this.grid);
   }
 
 
