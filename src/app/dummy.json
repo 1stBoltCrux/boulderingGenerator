@@ -1,0 +1,11 @@
+{ "grids": [
+
+    { "rock": {
+        "clicked": false,
+        "coordX": 0,
+        "coordY": 0,
+        "color": "white"
+      }
+    }
+  ]
+}

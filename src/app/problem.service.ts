@@ -22,4 +22,11 @@ export class ProblemService {
   addGrid(newGrid) {
     this.grids.push(newGrid);
   }
+<<<<<<< HEAD
+=======
+
+  getGridById(gridId: string){
+    return this.database.object('grids/' + gridId);
+  }
+>>>>>>> 6e6c2fb559ceab36687c5b43dc51fc1e067026ad
 }
