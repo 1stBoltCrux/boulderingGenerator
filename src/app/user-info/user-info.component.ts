@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Grid } from './../grid.model';
+import { UserGrid } from './../user.model';
 import { ProblemService } from './../problem.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class UserInfoComponent implements OnInit {
 
   constructor(private problemService: ProblemService) { }
   submitUserInfo(userName: string, difficulty: string) {
-    let newGrid: Grid = new Grid(userName, difficulty);
+    let newGrid: UserGrid = new UserGrid(userName, difficulty);
     this.problemService.submitUser(newGrid);
   }
   ngOnInit() {

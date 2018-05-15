@@ -7,5 +7,5 @@
     <option value="hard">Hard</option>
     <option value="ultra">Super Ultra</option>
   </select>
-  <button type="button" class="btn btn-success mt-3" (click)="submitUserInfo(userName.value, difficulty.value); userName.value=''; difficulty.value=''">Submit</button>
+  <button type="button" class="btn btn-success mt-3" (click)="submitUserInfo(userName.value, difficulty.value); userName.value=''; difficulty.value=''" routerLink="grid">Submit</button>
 </div>
