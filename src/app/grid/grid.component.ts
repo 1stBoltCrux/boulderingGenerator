@@ -54,13 +54,11 @@ export class GridComponent implements OnInit {
   highlight(rock) {
     if (rock === null) {
       console.log();
-    } else if (rock.clicked === true && rock.coordY > 12 && this.grid.clickedNum <=2 ) {
-       this.grid.clickedNum++;
-      console.log(this.grid.clickedNum);
+    } else if (rock.clicked === true && rock.coordY > 12 ) {
       return 'bg-success';
-    }  else if (rock.clicked === true && rock.coordY > 1) {
+    } else if (rock.clicked === true && rock.coordY > 1) {
       return 'bg-info';
-    } else if (rock.clicked === true && rock.coordY === 1){
+    }  else if (rock.clicked === true && rock.coordY === 1) {
       return 'bg-danger';
     }
   }

@@ -1,6 +1,6 @@
 <table >
   <tr *ngFor="let row of grid.board">
-    <td [class]="setClass(item)" (click)="validMove(item); highlight(item)" *ngFor="let item of row" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}">{{item ? 'Rock' : ''}}</td>
+    <td [class]="highlight(item)" (click)="validMove(item)" *ngFor="let item of row" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}"><div class="setClass(item)"></div></td>
 
   </tr>
 </table>
