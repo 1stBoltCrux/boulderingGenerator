@@ -1,3 +1,6 @@
+.container {
+  justify-content: center;
+}
 .navbar button {
   border: none;
   position: relative;
