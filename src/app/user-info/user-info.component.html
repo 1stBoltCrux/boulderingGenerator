@@ -1,0 +1,11 @@
+<div class="user-info-container">
+  <input type="text" class="form-control" placeholder="Enter your name:" #userName>
+  <select class="form-control mt-3" #difficulty>
+    <option value="">Choose a difficulty:</option>
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+    <option value="ultra">Super Ultra</option>
+  </select>
+  <button type="button" class="btn btn-success mt-3" (click)="submitUserInfo(userName.value, difficulty.value); userName.value=''; difficulty.value=''">Submit</button>
+</div>

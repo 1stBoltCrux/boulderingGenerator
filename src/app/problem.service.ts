@@ -15,8 +15,11 @@ export class ProblemService {
     return this.grids;
   }
 
+  submitUser(user) {
+    this.grids.push(user);
+  }
+
   addGrid(newGrid) {
     this.grids.push(newGrid);
   }
-
 }
