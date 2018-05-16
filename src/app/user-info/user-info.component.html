@@ -24,8 +24,7 @@
       </td>
     </tr>
   </table>
-  <button type="button" (click)="submitRoute(newGrid, difficulty.value); difficulty.value=''" class="btn btn-success mt-3">Submit Route</button>
-  <p> Move Number: {{ this.grid.moveNum }} </p>
+  <p class="mt-2"> Move Number: {{ this.grid.moveNum }} </p>
   <div class="gradeSelect">
     <select class="form-control mt-3" #difficulty>
       <option value="">Choose a difficulty:</option>
@@ -42,4 +41,5 @@
       <option value="V10">V10</option>
     </select>
   </div>
+  <button type="button" (click)="submitRoute(newGrid, difficulty.value); difficulty.value=''" class="btn btn-success mt-3">Submit Route</button>
 </div>
