@@ -1,6 +1,6 @@
 <div class="rock-grid-container">
-  <table >
-    <thead>
+  <table>
+    <thead >
       <th class="text-center">A</th>
       <th class="text-center">B</th>
       <th class="text-center">C</th>
@@ -13,9 +13,9 @@
       <th class="text-center">J</th>
       <th class="text-center">K</th>
     </thead>
-    <tr *ngFor="let row of grid.board">
-      <td *ngFor="let item of row" [class]="highlight(item)" class="board-item" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}">
-        <div [class]="setClass(item)">
+    <tr *ngFor="let row of loadedGrid">
+      <td *ngFor="let item of row" [class]="this.problemService.highlight(item)" class="board-item" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}">
+        <div [class]="this.problemService.setClass(item)">
 
         </div>
       </td>
