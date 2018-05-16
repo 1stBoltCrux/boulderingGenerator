@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { AuthenticationService } from './authentication.service';
+import { Router } from '@angular/router';
+import * as firebase from "firebase";
 
 @Component({
   selector: 'app-root',
@@ -7,19 +9,21 @@ import { AuthenticationService } from './authentication.service';
   styleUrls: ['./app.component.css'],
   providers: [AuthenticationService]
 })
-export class AppComponent {
-  title = 'app';
-  user;
-  private isLoggedIn: Boolean;
+export class AppComponent implements DoCheck{
+
+  private user;
+  private isLoggedIn: Boolean = null;
   private userName: String;
 
-  constructor(public authService: AuthenticationService) {
+  constructor(public authService: AuthenticationService, private router: Router) {
     this.authService.user.subscribe(user => {
       if(user == null) {
         this.isLoggedIn = false;
+        this.router.navigate([''])
       } else {
         this.isLoggedIn = true;
         this.userName = user.displayName;
+        this.router.navigate(['admin']);
       }
     });
   }
@@ -28,5 +32,9 @@ export class AppComponent {
   }
   logout() {
     this.authService.logout();
+  }
+
+  ngDoCheck() {
+    this.user = firebase.auth().currentUser;
   }
 }

@@ -7,6 +7,11 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './api-keys';
+import { AuthGuard } from './auth-guard.service';
+import { AuthenticationService } from './authentication.service';
+
+
+
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProblemListComponent } from './problem-list/problem-list.component';
@@ -43,7 +48,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
