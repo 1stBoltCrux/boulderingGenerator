@@ -13,10 +13,6 @@ const appRoutes: Routes = [
     component: WelcomeComponent
   },
   {
-    path: 'grid',
-    component: GridComponent
-  },
-  {
     path: 'problem-list',
     component: ProblemListComponent
   },
