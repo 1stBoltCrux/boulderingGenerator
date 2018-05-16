@@ -7,7 +7,7 @@
         <h4 (click)="goToDetailPage(grid)">
           <div class="row prob-list-inner">
             <div class="col">
-              User:&nbsp;&nbsp;{{grid.name}}
+              User:&nbsp;&nbsp;<span class="{{grid.name.length > 13 ? 'small-font' : 'no'}}">{{grid.name}}</span>
               <br>
               Difficulty:&nbsp;&nbsp;{{grid.difficulty}}
             </div>

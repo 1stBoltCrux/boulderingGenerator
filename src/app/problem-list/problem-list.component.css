@@ -6,6 +6,10 @@ h2  {
 h4  {
   font-weight: bold;
 }
+
+.small-font {
+  font-size: 1.2rem;
+}
 .card {
   padding: 10px;
   margin-bottom: 10px;
@@ -17,6 +21,10 @@ h4  {
 .prob-list-inner {
   display: flex;
   align-items: center;
+}
+.prob-list-inner span {
+  font-family: 'Bungee', cursive !important;
+  color: #FCB836;
 }
 .delete {
   text-align: center;
