@@ -1,20 +1,6 @@
 <div [hidden]="userCheck()" class="user-info-container">
   <input type="text" class="form-control" placeholder="Enter your name:" #userName>
-  <select class="form-control mt-3" #difficulty>
-    <option value="">Choose a difficulty:</option>
-    <option value="VB">VB</option>
-    <option value="V1">V1</option>
-    <option value="V2">V2</option>
-    <option value="V3">V3</option>
-    <option value="V4">V4</option>
-    <option value="V5">V5</option>
-    <option value="V6">V6</option>
-    <option value="V7">V7</option>
-    <option value="V8">V8</option>
-    <option value="V9">V9</option>
-    <option value="V10">V10</option>
-  </select>
-  <button type="button" class="btn btn-success mt-3" (click)="createUser(newGrid, userName.value, difficulty.value); userName.value=''; difficulty.value=''">Create New Board</button>
+  <button type="button" class="btn btn-success mt-3" (click)="createUser(newGrid, userName.value); userName.value=''; ">Create New Board</button>
 </div>
 <div *ngIf="userCheck()" class="rock-grid-container">
   <table >
@@ -38,6 +24,22 @@
       </td>
     </tr>
   </table>
-  <button type="button" (click)="submitRoute()" class="btn btn-success mt-3">Submit Route</button>
+  <button type="button" (click)="submitRoute(newGrid, difficulty.value); difficulty.value=''" class="btn btn-success mt-3">Submit Route</button>
   <p> Move Number: {{ this.grid.moveNum }} </p>
+  <div class="gradeSelect">
+    <select class="form-control mt-3" #difficulty>
+      <option value="">Choose a difficulty:</option>
+      <option value="VB">VB</option>
+      <option value="V1">V1</option>
+      <option value="V2">V2</option>
+      <option value="V3">V3</option>
+      <option value="V4">V4</option>
+      <option value="V5">V5</option>
+      <option value="V6">V6</option>
+      <option value="V7">V7</option>
+      <option value="V8">V8</option>
+      <option value="V9">V9</option>
+      <option value="V10">V10</option>
+    </select>
+  </div>
 </div>
