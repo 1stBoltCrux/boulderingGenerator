@@ -13,6 +13,7 @@ import { ProblemListComponent } from './problem-list/problem-list.component';
 import { HelpComponent } from './help/help.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { GridDetailsComponent } from './grid-details/grid-details.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 export const firebaseConfig = {
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     ProblemListComponent,
     HelpComponent,
     UserInfoComponent,
-    GridDetailsComponent
+    GridDetailsComponent,
+    AdminComponent
 
   ],
   imports: [
