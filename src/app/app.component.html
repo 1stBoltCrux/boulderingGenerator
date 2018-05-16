@@ -7,7 +7,7 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item"><a class="nav-link" routerLink="problem-list">View Problems</a></li>
       <li class="nav-item"><a class="nav-link" routerLink="help">Help</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="admin">Admin</a></li>
+      <li *ngIf="isLoggedIn" class="nav-item"><a class="nav-link" routerLink="admin">Admin</a></li>
     </ul>
     <ul class="navbar-nav">
       <li *ngIf="isLoggedIn" class="nav-item">
