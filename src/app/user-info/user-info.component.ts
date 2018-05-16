@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserGrid } from './../user.model';
 import { ProblemService } from './../problem.service';
-import { GridComponent } from '../grid/grid.component';
 import { Grid } from '../grid.model';
 
 @Component({
@@ -16,6 +15,7 @@ export class UserInfoComponent implements OnInit {
 
     newGrid: UserGrid = new UserGrid('userName', 'difficulty');
     grid = new Grid();
+    secondGrid;
 
   createUser(grid, userName: string, difficulty: string) {
     grid.name = userName;
@@ -25,18 +25,6 @@ export class UserInfoComponent implements OnInit {
 
   makeMove() {
     this.grid.moveNum++;
-  }
-
-  addRocks() {
-    for (let i = 0; i < this.grid.board.length; i++) {
-        for (let j = 0; j < this.grid.board[i].length; j++) {
-          if (this.grid.board[i][j] !== null) {
-            this.grid.board[i][j].coordY = i + 1;
-            this.grid.board[i][j].coordX = j + 1;
-          }
-        }
-    }
-    return this.grid.board;
   }
 
   validMove(selectedRock) {
@@ -55,17 +43,18 @@ export class UserInfoComponent implements OnInit {
       selectedRock.clicked = false;
       this.grid.moveNum--;
     }
-
   }
-  clickedRocks(obj) {
 
-    for (let i = 0; i < this.grid.board.length; i++) {
-      for (let j = 0; j < this.grid.board[i].length; j++) {
-        if (this.grid.board[i][j] !== null && this.grid.board[i][j].clicked) {
-          obj.clickedArr.push(this.grid.board[i][j]);
+  clickedRocks(obj) {
+    console.log(this.secondGrid)
+    for (let i = 0; i < this.secondGrid.length; i++) {
+      for (let j = 0; j < this.secondGrid[i].length; j++) {
+        if (this.secondGrid[i][j] !== null && this.secondGrid[i][j].clicked) {
+          obj.clickedArr.push(this.secondGrid[i][j]);
         }
       }
     }
+    console.log(obj.clickedArr);
     return obj.clickedArr;
   }
 
@@ -95,44 +84,12 @@ export class UserInfoComponent implements OnInit {
     }
   }
 
-
-  highlight(rock) {
-    if (rock === null) {
-      console.log();
-    } else if (rock.clicked === true && rock.coordY > 14) {
-      return 'bg-success';
-    } else if (rock.clicked === true && rock.coordY > 1) {
-      return 'bg-info';
-    } else if (rock.clicked === true && rock.coordY === 1) {
-      return 'bg-danger';
-    } else if (rock.clicked === false) {
-      return '';
-    }
-  }
-
-  setClass(item) {
-    if (item === null) {
-    } else if (item.color === 'orange') {
-      return 'hold-1';
-    } else if (item.color === 'darkblue') {
-      return 'hold-2';
-    } else if (item.color === 'yellow') {
-      return 'hold-3';
-    } else if (item.color === 'teal') {
-      return 'hold-4';
-    } else if (item.color === 'white') {
-      return 'hold-5';
-    }
-  }
-
   userCheck() {
     return this.newGrid.name !== 'userName'? true: false;
   }
 
-
-
   ngOnInit() {
-    this.addRocks();
+    this.secondGrid = this.problemService.addRocks();
   }
 
 }
