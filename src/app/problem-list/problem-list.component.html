@@ -2,9 +2,27 @@
 
 <div *ngFor="let grid of grids | async" class="card card-default">
   <div class="card-body">
-    <h4 (click)="goToDetailPage(grid)">User: {{grid.name}} Difficulty: {{grid.difficulty}}</h4>
+    <h4 (click)="goToDetailPage(grid)">
+      <div class="row">
+        <div class="col col-md">
+          User:
+          <br>
+          {{grid.name}}
+        </div>
+        <div class="col col-md">
+          Difficulty:
+          <br>
+          {{grid.difficulty}}
+        </div>
+      </div>
+    </h4>
+
     <div *ngIf="currentRoute === '/admin'">
-      <button class="btn btn-danger" (click)="beginDeletingGrid(grid)">Delete</button>
+      <hr>
+      <div class="delete">
+
+        <button class="btn btn-danger" (click)="beginDeletingGrid(grid)">Delete</button>
+      </div>
     </div>
   </div>
 </div>
