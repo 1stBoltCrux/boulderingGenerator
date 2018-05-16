@@ -16,7 +16,6 @@ export class UserInfoComponent implements OnInit {
 
     newGrid: UserGrid = new UserGrid('userName', 'difficulty');
     grid = new Grid();
-    moveNum = 0;
 
   createUser(grid, userName: string, difficulty: string) {
     grid.name = userName;
@@ -25,7 +24,7 @@ export class UserInfoComponent implements OnInit {
   }
 
   makeMove() {
-    this.moveNum++;
+    this.grid.moveNum++;
   }
 
   addRocks() {
@@ -41,10 +40,10 @@ export class UserInfoComponent implements OnInit {
   }
 
   validMove(selectedRock) {
-    if (selectedRock === null || this.moveNum === 14) {
+    if (selectedRock === null || this.grid.moveNum === 14) {
       if (selectedRock.clicked === true ) {
         selectedRock.clicked = false;
-        this.moveNum--;
+        this.grid.moveNum--;
       }
     } else if (selectedRock.coordY < 7 && this.grid.moveNum < 2 && selectedRock.clicked === false) {
       selectedRock.clicked = true;
@@ -54,7 +53,7 @@ export class UserInfoComponent implements OnInit {
       this.makeMove();
     } else if (selectedRock.clicked === true) {
       selectedRock.clicked = false;
-      this.moveNum--;
+      this.grid.moveNum--;
     }
 
   }
@@ -69,10 +68,26 @@ export class UserInfoComponent implements OnInit {
     }
     return obj.clickedArr;
   }
+
+  clearBoard() {
+    for (let i = 0; i < this.grid.board.length; i++) {
+      for (let j = 0; j < this.grid.board[i].length; j++) {
+        if (this.grid.board[i][j] !== null) {
+          this.grid.board[i][j].clicked = false;
+        } else {
+          console.log();
+        }
+      }
+    }
+  }
+
   submitRoute() {
     this.clickedRocks(this.newGrid);
     this.problemService.addGrid(this.newGrid);
     this.newGrid.name = 'userName';
+    this.newGrid.difficulty = 'difficulty';
+    this.grid.moveNum = 0;
+    this.clearBoard();
   }
 
   validEndMove(selectedRock) {
@@ -112,9 +127,9 @@ export class UserInfoComponent implements OnInit {
 
   userCheck() {
     return this.newGrid.name !== 'userName'? true: false;
-
-
   }
+
+
 
   ngOnInit() {
     this.addRocks();

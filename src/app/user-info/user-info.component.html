@@ -1,4 +1,4 @@
-<div  class="user-info-container">
+<div [hidden]="userCheck()" class="user-info-container">
   <input type="text" class="form-control" placeholder="Enter your name:" #userName>
   <select class="form-control mt-3" #difficulty>
     <option value="">Choose a difficulty:</option>
@@ -39,5 +39,5 @@
     </tr>
   </table>
   <button type="button" (click)="submitRoute()" class="btn btn-success mt-3">Submit Route</button>
+  <p> Move Number: {{ this.grid.moveNum }} </p>
 </div>
-<p> Move Number: {{ this.moveNum }} </p>
