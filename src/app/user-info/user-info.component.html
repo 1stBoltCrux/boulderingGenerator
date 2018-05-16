@@ -1,4 +1,4 @@
-<div class="user-info-container">
+<div  class="user-info-container">
   <input type="text" class="form-control" placeholder="Enter your name:" #userName>
   <select class="form-control mt-3" #difficulty>
     <option value="">Choose a difficulty:</option>
@@ -14,5 +14,30 @@
     <option value="v9">V9</option>
     <option value="v10">V10</option>
   </select>
-  <button type="button" class="btn btn-success mt-3" (click)="submitUserInfo(userName.value, difficulty.value); userName.value=''; difficulty.value=''" routerLink="grid">Submit</button>
+  <button type="button" class="btn btn-success mt-3" (click)="createUser(newGrid, userName.value, difficulty.value); userName.value=''; difficulty.value=''">Create New Board</button>
 </div>
+<div *ngIf="userCheck()" class="rock-grid-container">
+  <table >
+    <thead>
+      <th class="text-center">A</th>
+      <th class="text-center">B</th>
+      <th class="text-center">C</th>
+      <th class="text-center">D</th>
+      <th class="text-center">E</th>
+      <th class="text-center">F</th>
+      <th class="text-center">G</th>
+      <th class="text-center">H</th>
+      <th class="text-center">I</th>
+      <th class="text-center">J</th>
+      <th class="text-center">K</th>
+    </thead>
+    <tr *ngFor="let row of grid.board">
+      <td [class]="highlight(item)" (click)="validMove(item)" *ngFor="let item of row" class="board-item" id="{{item !== null ? item.coordX : 'No'}}-{{item !== null ? item.coordY : 'No'}}">
+        <div [class]="setClass(item)">
+        </div>
+      </td>
+    </tr>
+  </table>
+  <button type="button" (click)="submitRoute()" class="btn btn-success mt-3">Submit Route</button>
+</div>
+<p> Move Number: {{ this.moveNum }} </p>
