@@ -1,0 +1,19 @@
+h2  {
+  font-weight: bold;
+  text-align: center;
+  color: #FCB836;
+}
+h4  {
+  font-weight: bold;
+}
+.card {
+  margin-bottom: 10px;
+  text-align: center;
+  background: rgba(177,177,177,.5);
+  color: #FCB836;
+  text-shadow: 2px 2px black;
+  min-height: 200px;
+}
+.delete {
+  text-align: center;
+}

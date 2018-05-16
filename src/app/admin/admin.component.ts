@@ -10,7 +10,7 @@ import { ProblemService } from '../problem.service';
 })
 export class AdminComponent implements OnInit {
   @Input() selectedGrid;
-  
+
   constructor(private problemService: ProblemService) { }
 
   ngOnInit() {

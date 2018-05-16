@@ -8,7 +8,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './api-keys';
 import { AppComponent } from './app.component';
-import { GridComponent } from './grid/grid.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProblemListComponent } from './problem-list/problem-list.component';
 import { HelpComponent } from './help/help.component';
@@ -27,7 +26,6 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    GridComponent,
     WelcomeComponent,
     ProblemListComponent,
     HelpComponent,
