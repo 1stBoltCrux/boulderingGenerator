@@ -7,13 +7,16 @@ h4  {
   font-weight: bold;
 }
 .card {
+  padding: 10px;
   margin-bottom: 10px;
-  text-align: center;
   background: rgba(177,177,177,.5);
   box-shadow: 0 5px 20px rgba(0,0,0,.2);
   color: #FCB836;
   text-shadow: 2px 2px black;
-  min-height: 200px;
+}
+.prob-list-inner {
+  display: flex;
+  align-items: center;
 }
 .delete {
   text-align: center;

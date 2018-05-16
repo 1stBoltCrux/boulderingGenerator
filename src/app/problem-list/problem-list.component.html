@@ -5,25 +5,20 @@
     <div class="card">
       <div class="card-body">
         <h4 (click)="goToDetailPage(grid)">
-          <div class="row">
-            <div class="col col-md">
-              User:
+          <div class="row prob-list-inner">
+            <div class="col">
+              User:&nbsp;&nbsp;{{grid.name}}
               <br>
-              {{grid.name}}
+              Difficulty:&nbsp;&nbsp;{{grid.difficulty}}
             </div>
-            <div class="col col-md">
-              Difficulty:
-              <br>
-              {{grid.difficulty}}
+            <div *ngIf="currentRoute === '/admin'">
+              <div class="delete">
+                <button class="btn btn-danger mr-3" (click)="beginDeletingGrid(grid)">Delete</button>
+              </div>
             </div>
           </div>
         </h4>
-        <div *ngIf="currentRoute === '/admin'">
-          <hr>
-          <div class="delete">
-            <button class="btn btn-danger" (click)="beginDeletingGrid(grid)">Delete</button>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
