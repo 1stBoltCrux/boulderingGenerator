@@ -19,7 +19,6 @@ export class UserInfoComponent implements OnInit {
 
   createUser(grid, userName: string) {
     grid.name = userName;
-    console.log(grid);
   }
 
   makeMove() {
@@ -45,7 +44,6 @@ export class UserInfoComponent implements OnInit {
   }
 
   clickedRocks(obj) {
-    console.log(this.secondGrid)
     for (let i = 0; i < this.secondGrid.length; i++) {
       for (let j = 0; j < this.secondGrid[i].length; j++) {
         if (this.secondGrid[i][j] !== null && this.secondGrid[i][j].clicked) {
@@ -53,7 +51,6 @@ export class UserInfoComponent implements OnInit {
         }
       }
     }
-    console.log(obj.clickedArr);
     return obj.clickedArr;
   }
 
@@ -63,7 +60,6 @@ export class UserInfoComponent implements OnInit {
         if (this.grid.board[i][j] !== null) {
           this.grid.board[i][j].clicked = false;
         } else {
-          console.log();
         }
       }
     }
@@ -72,7 +68,6 @@ export class UserInfoComponent implements OnInit {
   submitRoute(grid, difficulty: string) {
 
     grid.difficulty = difficulty;
-    console.log(grid.difficulty)
     this.clickedRocks(this.newGrid);
     this.problemService.addGrid(this.newGrid);
     this.newGrid.name = 'userName';

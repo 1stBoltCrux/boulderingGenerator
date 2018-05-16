@@ -34,7 +34,6 @@ export class ProblemService {
     gridEntryInFirebase.remove();
   }
 
-  //new additions to the service//
   addRocks() {
     for (let i = 0; i < this.grid.board.length; i++) {
         for (let j = 0; j < this.grid.board[i].length; j++) {
@@ -44,7 +43,6 @@ export class ProblemService {
           }
         }
     }
-    console.log('addRocks');
     return this.grid.board;
   }
 
@@ -60,15 +58,14 @@ export class ProblemService {
           }
         }
       }
-      console.log('loopRocks');
-      console.log(this.grid.board);
+
       return this.grid.board;
     }
   }
 
   highlight(rock) {
     if (rock === null) {
-      console.log();
+
     } else if (rock.clicked === true && rock.coordY > 14) {
       return 'bg-success';
     } else if (rock.clicked === true && rock.coordY > 1) {
