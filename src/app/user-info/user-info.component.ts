@@ -17,9 +17,8 @@ export class UserInfoComponent implements OnInit {
     grid = new Grid();
     secondGrid;
 
-  createUser(grid, userName: string, difficulty: string) {
+  createUser(grid, userName: string) {
     grid.name = userName;
-    grid.difficulty = difficulty;
     console.log(grid);
   }
 
@@ -70,7 +69,10 @@ export class UserInfoComponent implements OnInit {
     }
   }
 
-  submitRoute() {
+  submitRoute(grid, difficulty: string) {
+
+    grid.difficulty = difficulty;
+    console.log(grid.difficulty)
     this.clickedRocks(this.newGrid);
     this.problemService.addGrid(this.newGrid);
     this.newGrid.name = 'userName';
