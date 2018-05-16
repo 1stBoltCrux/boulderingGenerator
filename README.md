@@ -58,7 +58,7 @@ export const masterFirebaseConfig = {
 * To view project in development mode, navigate to project root folder and run `ng serve --open`
 
 #### Firebase Deployed
-* Travel to <a href="bouldering-generator.firebaseapp.com">Build-A-Board</a> to view the deployed app.
+* Travel to <a href="https://bouldering-generator.firebaseapp.com/">Build-A-Board</a> to view the deployed app.
 
 
 ## Technologies Used
