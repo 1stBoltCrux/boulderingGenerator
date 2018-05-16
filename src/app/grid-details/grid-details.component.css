@@ -1,0 +1,47 @@
+td {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+}
+th {
+  color: #FCB836;
+}
+.rock-grid-container {
+  padding: 25px;
+  background: rgba(177,177,177,.5);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.hold-1 {
+  background: url('./../../assets/hold-1.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.hold-2 {
+  background: url('./../../assets/hold-2.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.hold-3 {
+  background: url('./../../assets/hold-3.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.hold-4 {
+  background: url('./../../assets/hold-4.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.hold-5 {
+  background: url('./../../assets/hold-5.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+td:hover {
+  cursor: pointer;
+}
+
+td div {
+  min-height: 100%;
+  min-width: 100%;
+}
