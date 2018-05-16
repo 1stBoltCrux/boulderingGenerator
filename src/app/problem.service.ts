@@ -9,7 +9,6 @@ export class ProblemService {
 
   constructor(private database: AngularFireDatabase) {
     this.grids = database.list('grids');
-    // console.log(this.grids);
   }
   getGrids() {
     return this.grids;
@@ -24,5 +23,10 @@ export class ProblemService {
 
   getGridById(gridId: string){
     return this.database.object('grids/' + gridId);
+  }
+
+  deleteGrid(localGridToDelete) {
+    let gridEntryInFirebase = this.getGridById(localGridToDelete.$key);
+    gridEntryInFirebase.remove();
   }
 }

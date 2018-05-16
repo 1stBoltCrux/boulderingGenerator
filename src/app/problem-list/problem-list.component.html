@@ -3,5 +3,8 @@
 <div *ngFor="let grid of grids | async" class="card card-default">
   <div class="card-body">
     <h4 (click)="goToDetailPage(grid)">User: {{grid.name}} Difficulty: {{grid.difficulty}}</h4>
+    <div *ngIf="currentRoute === '/admin'">
+      <button class="btn btn-danger" (click)="beginDeletingGrid(grid)">Delete</button>
+    </div>
   </div>
 </div>
