@@ -30,10 +30,8 @@ export class GridDetailsComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.gridId = urlParameters['id'];
     });
-    // this.gridToDisplay = this.problemService.getGridById(this.gridId);
     this.problemService.getGridById(this.gridId).subscribe(dataLastEmittedFromObserver => {
       this.gridToDisplay = dataLastEmittedFromObserver;
-      // console.log(this.gridToDisplay.clickedArr);
       this.loadedGrid = this.problemService.loopRocks(this.gridToDisplay.clickedArr);
       this.isDataAvailable = true;
     })
