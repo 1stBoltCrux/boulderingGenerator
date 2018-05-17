@@ -1,7 +1,9 @@
 .user-info-container {
   width: 500px;
 }
-
+.user-info-container h2 {
+  color: #FCB836;
+}
 .user-info-container input,
 .user-info-container select,
 .user-info-container select option {
@@ -67,4 +69,21 @@ td:hover {
 td div {
   min-height: 100%;
   min-width: 100%;
+}
+
+@media screen and (max-width: 415px) {
+  .rock-grid-container {
+    padding: 10px;
+  }
+  .user-info-container {
+    max-width: 500px;
+    width: 100%;
+  }
+  td {
+    width: 40px;
+    height: 30px;
+  }
+  .hold-1, .hold-2, .hold3, .hold-4, .hold-5 {
+    background-size: 100%;
+  }
 }

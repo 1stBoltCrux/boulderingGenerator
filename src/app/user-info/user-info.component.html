@@ -1,4 +1,5 @@
-<div [hidden]="userCheck()" class="user-info-container">
+<div [hidden]="userCheck()" class="user-info-container text-center col">
+  <h2>Build-a-Board</h2>
   <input type="text" class="form-control" placeholder="Enter your name:" #userName>
   <button type="button" class="btn btn-success mt-3" (click)="createUser(newGrid, userName.value); userName.value=''; ">Create New Board</button>
 </div>
