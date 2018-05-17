@@ -50,3 +50,15 @@ td div {
   min-height: 100%;
   min-width: 100%;
 }
+@media screen and (max-width: 415px) {
+  .rock-grid-container {
+    padding: 10px;
+  }
+  td {
+    width: 40px;
+    height: 30px;
+  }
+  .hold-1, .hold-2, .hold3, .hold-4, .hold-5 {
+    background-size: 100%;
+  }
+}
